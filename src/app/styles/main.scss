@@ -1,0 +1,10 @@
+@use "./vars/var";
+@use "./reset/reset";
+@use "./theme/light";
+@use "./theme/dark";
+
+// BODY
+body {
+  background-color: var(--body-bg);
+  background-image: var(--body-bg-gradient);
+}

@@ -1,0 +1,16 @@
+body.light {
+  --body-bg: #ffffff;
+  --body-bg-gradient: linear-gradient(
+    113deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(248, 250, 252) 56%,
+    rgb(241, 245, 249) 100%
+  );
+
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-gradient: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(248, 250, 252, 0.9) 100%
+  );
+}
