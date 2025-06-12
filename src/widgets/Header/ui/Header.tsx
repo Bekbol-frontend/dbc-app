@@ -50,7 +50,7 @@ function Header() {
         </div>
       </header>
 
-      <Modal open={modal} onClose={closeModal} lazy>
+      <Modal open={modal} onClose={closeModal} lazy title={t("Оставить заявку")}>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
           natus laborum corporis veniam alias facere, voluptatem nostrum iste

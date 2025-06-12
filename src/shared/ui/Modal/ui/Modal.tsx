@@ -14,10 +14,11 @@ interface IProps {
   open: boolean;
   onClose: () => void;
   lazy?: boolean;
+  title: string;
 }
 
 function Modal(props: IProps) {
-  const { children, addClass = "", open, onClose } = props;
+  const { children, addClass = "", open, onClose, title } = props;
   const [delay, setDelay] = useState(false);
 
   const closeModal = useCallback(() => {
@@ -28,14 +29,16 @@ function Modal(props: IProps) {
   }, [onClose]);
 
   useEffect(() => {
+    let timer: NodeJS.Timeout;
     if (open) {
       window.addEventListener("keyup", closeModal);
-      setTimeout(() => setDelay(true), TIMEOUT);
+      timer = setTimeout(() => setDelay(true), TIMEOUT);
     }
 
     return () => {
       window.removeEventListener("keyup", closeModal);
       setDelay(false);
+      clearTimeout(timer);
     };
   }, [open, closeModal]);
 
@@ -54,7 +57,7 @@ function Modal(props: IProps) {
         <div className={styles.content} onClick={(e) => e.stopPropagation()}>
           <div className={styles.modalHeader}>
             <Flex align="center" gap={5} justify="space-between">
-              <h3>Modal</h3>
+              <h3>{title}</h3>
               <Button
                 type_btn="text"
                 addClass={styles.closeBtn}
