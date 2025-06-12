@@ -1,0 +1,43 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: var(--modal-bg);
+  backdrop-filter: blur(4px);
+  display: grid;
+  place-items: center;
+  padding: var(--padding);
+  height: 100vh;
+  overflow: auto;
+  opacity: 0;
+  z-index: -111;
+  pointer-events: none;
+  transition: opacity var(--transition), z-index var(--transition);
+
+  &.show {
+    opacity: 1;
+    z-index: 111;
+    pointer-events: all;
+  }
+
+  .content {
+    background-color: var(--card-bg);
+    max-width: 600px;
+    width: 100%;
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+
+    .modalHeader {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 10px;
+    }
+
+    .modalBody {
+      padding-block: var(--padding);
+    }
+
+    .closeBtn {
+      padding: var(--btn-padding-theme);
+    }
+  }
+}

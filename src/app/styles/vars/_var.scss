@@ -1,4 +1,30 @@
 :root {
+  // fonts
   --font-roboto: "Roboto", sans-serif;
   --font-nunito: "Nunito", sans-serif;
+
+  // header
+  --header-height: 90px;
+
+  // btn
+  --btn-padding: 10px 20px;
+  --btn-padding-theme: 10px;
+  --btn-border-radius: 7px;
+  --btn-font-size: 15px;
+
+  // padding
+  --padding: 30px;
+
+  // border-radius
+  --border-radius: 12px;
+
+  // colors
+  --primary: royalblue;
+  --primary-hover: rgb(41, 83, 207);
+  --secondary: rgb(86, 32, 204);
+  --secondary-hover: rgb(86, 32, 204);
+  --color-white: #fff;
+
+  // transition
+  --transition: 200ms ease;
 }

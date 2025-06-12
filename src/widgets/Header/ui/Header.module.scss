@@ -1,0 +1,40 @@
+.header {
+  height: var(--header-height);
+  background: var(--header-bg);
+  background: var(--header-gradient);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--header-border-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .containerBlock {
+    flex: 1;
+
+    .logoLink {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-white);
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--logo-shodow);
+
+      img {
+        width: 115px;
+      }
+    }
+
+    .headerBtn {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-color);
+    }
+  }
+}

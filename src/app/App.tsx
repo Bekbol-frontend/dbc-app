@@ -1,5 +1,8 @@
+import { memo } from "react";
+import { AppRouter } from "./Providers/AppRouter";
+
 function App() {
-  return <div>app</div>;
+  return <AppRouter />;
 }
 
-export default App;
+export default memo(App);

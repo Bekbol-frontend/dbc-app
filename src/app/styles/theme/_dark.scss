@@ -1,4 +1,5 @@
 body.dark {
+  // body
   --body-bg: #01011a;
   --body-bg-gradient: linear-gradient(
     113deg,
@@ -7,10 +8,36 @@ body.dark {
     rgb(43, 66, 114) 100%
   );
 
+  // card
   --card-bg: rgba(15, 23, 42, 0.8);
   --card-gradient: linear-gradient(
     135deg,
     rgba(15, 23, 42, 0.9) 0%,
     rgba(30, 41, 59, 0.8) 100%
   );
+
+  // header
+  --header-bg: rgba(15, 23, 42, 0.6);
+  --header-gradient: linear-gradient(
+    90deg,
+    rgba(15, 23, 42, 0.6) 0%,
+    rgba(30, 41, 59, 0.6) 100%
+  );
+  --header-border-color: rgba(255, 255, 255, 0.09);
+
+  // border
+  --border-color: rgba(255, 255, 255, 0.2);
+
+  // logo
+  --logo-shodow: 1px 1px 7px rgba(255, 255, 255, 0.2);
+
+  --link-color: #fff;
+  --text-color: #fdfdfd;
+  --title-color: #fffefe;
+
+  // modal
+  --modal-bg: rgba(0, 0, 0, 0.7);
+
+  // btn
+  --btn-text-bg: rgba(238, 238, 238, 0.1);
 }

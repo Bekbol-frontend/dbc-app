@@ -7,4 +7,9 @@
 body {
   background-color: var(--body-bg);
   background-image: var(--body-bg-gradient);
+  background-repeat: no-repeat;
+  font-family: var(--font-nunito);
+  min-height: 100vh;
+  width: 100%;
+  color: var(--text-color);
 }

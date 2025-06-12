@@ -1,0 +1,60 @@
+.dropdown {
+  width: 95px;
+  position: relative;
+
+  @mixin blockDropdown($padding: var(--btn-padding-theme)) {
+    border: 1px solid var(--border-color);
+    padding: $padding;
+    border-radius: var(--btn-border-radius);
+    background-color: var(--card-bg);
+  }
+
+  .top {
+    @include blockDropdown;
+    cursor: pointer;
+
+    .selectText {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
+
+  .bottom {
+    @include blockDropdown(5px);
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: 0;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity var(--transition), visibility var(--transition);
+
+    &.show {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+    }
+
+    & > span {
+      display: flex;
+      width: 100%;
+      padding: var(--btn-padding-theme);
+      border-radius: var(--btn-border-radius);
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: background-color var(--transition), color var(--transition),
+        border var(--transition);
+
+      &:hover {
+        border: 1px solid var(--border-color);
+        background-color: var(--card-bg);
+      }
+    }
+  }
+
+  .icon {
+    font-size: 14px;
+  }
+}
