@@ -11,6 +11,7 @@ import { SwitchLang } from "@/shared/ui/SwitchLang";
 import { Button } from "@/shared/ui/Button";
 import { useTranslation } from "react-i18next";
 import { Modal } from "@/shared/ui/Modal";
+import { LeaveForm } from "@/features/LeaveForm";
 
 function Header() {
   const [modal, setModal] = useState(false);
@@ -50,15 +51,13 @@ function Header() {
         </div>
       </header>
 
-      <Modal open={modal} onClose={closeModal} lazy title={t("Оставить заявку")}>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          natus laborum corporis veniam alias facere, voluptatem nostrum iste
-          veritatis perspiciatis reprehenderit error delectus assumenda fugit
-          voluptatum illum esse suscipit quod vel maiores. Pariatur, nesciunt
-          explicabo. Nam porro qui corrupti nemo, tenetur et quam incidunt sit
-          magnam eveniet optio eaque suscipit.
-        </p>
+      <Modal
+        open={modal}
+        onClose={closeModal}
+        lazy
+        title={t("Оставить заявку")}
+      >
+        <LeaveForm />
       </Modal>
     </>
   );

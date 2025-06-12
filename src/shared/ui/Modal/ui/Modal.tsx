@@ -30,17 +30,24 @@ function Modal(props: IProps) {
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
+
+    const onKeyUp = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    };
+
     if (open) {
-      window.addEventListener("keyup", closeModal);
+      window.addEventListener("keyup", onKeyUp);
       timer = setTimeout(() => setDelay(true), TIMEOUT);
     }
 
     return () => {
-      window.removeEventListener("keyup", closeModal);
+      window.removeEventListener("keyup", onKeyUp);
       setDelay(false);
       clearTimeout(timer);
     };
-  }, [open, closeModal]);
+  }, [open]);
 
   const mods: MODS_CLSX = {
     [styles.show]: delay,

@@ -1,0 +1,54 @@
+.block {
+  width: 100%;
+
+  .label {
+    cursor: pointer;
+  }
+
+  .inputWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--btn-border-radius);
+    overflow: hidden;
+    padding: var(--input-padding);
+
+    &.errorInputWrapper {
+      border-color: var(--danger);
+    }
+
+    &.phoneInputWrapper {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .phoneSpan {
+      font-size: 15px;
+    }
+
+    .input {
+      background-color: transparent;
+      border: none;
+      width: 100%;
+      font-size: 15px;
+
+      &.phoneInput {
+        padding-left: 2px;
+      }
+
+      &.errorInput {
+        color: var(--danger);
+
+        &::placeholder {
+          color: var(--danger);
+        }
+      }
+    }
+  }
+
+  .errorSpan {
+    color: var(--danger);
+  }
+}
