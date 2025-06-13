@@ -1,0 +1,9 @@
+.title {
+  margin-bottom: clamp(15px, 2vw, 30px);
+}
+
+.gridBlock {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}

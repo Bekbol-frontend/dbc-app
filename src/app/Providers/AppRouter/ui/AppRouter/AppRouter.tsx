@@ -1,22 +1,14 @@
 import { memo } from "react";
 import { Route, Routes } from "react-router-dom";
 import RootLayout from "../RootLayout/RootLayout";
-import { useTranslation } from "react-i18next";
+import { HomePageAsync } from "@/pages/HomePage";
+import { routePaths } from "@/shared/config/routeConfig";
 
 function AppRouter() {
-  const { t } = useTranslation();
-
   return (
     <Routes>
-      <Route path="/" element={<RootLayout />}>
-        <Route
-          index
-          element={
-            <>
-              <h1>{t("hello")}</h1>
-            </>
-          }
-        />
+      <Route path={routePaths.HOME} element={<RootLayout />}>
+        <Route index element={<HomePageAsync />} />
       </Route>
     </Routes>
   );

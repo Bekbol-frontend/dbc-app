@@ -1,6 +1,7 @@
 .dropdown {
   width: 95px;
   position: relative;
+  z-index: 100;
 
   @mixin blockDropdown($padding: var(--btn-padding-theme)) {
     border: 1px solid var(--border-color);
@@ -25,6 +26,7 @@
     top: 110%;
     left: 0;
     right: 0;
+    z-index: 1000;
 
     opacity: 0;
     pointer-events: none;

@@ -36,5 +36,15 @@
       border: 1px solid var(--border-color);
       color: var(--text-color);
     }
+
+    .link {
+      align-items: center;
+      gap: 5px;
+      font-size: 16px;
+
+      .iconTel {
+        font-size: 18px;
+      }
+    }
   }
 }

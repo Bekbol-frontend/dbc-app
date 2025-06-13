@@ -1,0 +1,8 @@
+.card {
+  background-color: var(--card-bg);
+  background-image: var(--card-gradient);
+  padding: var(--padding-card);
+
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}

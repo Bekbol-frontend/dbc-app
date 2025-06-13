@@ -13,7 +13,6 @@ function SwitchLang() {
 
   const changeLang = useCallback(
     (code: string) => {
-      console.log(code);
       i18n.changeLanguage(code);
     },
     [i18n]

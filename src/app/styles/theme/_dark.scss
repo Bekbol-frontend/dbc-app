@@ -11,9 +11,10 @@ body.dark {
   // card
   --card-bg: rgba(15, 23, 42, 0.8);
   --card-gradient: linear-gradient(
-    135deg,
-    rgba(15, 23, 42, 0.9) 0%,
-    rgba(30, 41, 59, 0.8) 100%
+    90deg,
+    rgba(11, 16, 26, 0.9) 0%,
+    rgba(4, 24, 53, 0.89) 100%,
+    rgba(6, 12, 27, 0.9) 0%
   );
 
   // header
@@ -40,4 +41,9 @@ body.dark {
 
   // btn
   --btn-text-bg: rgba(238, 238, 238, 0.1);
+
+  /* title-hero */
+  --title-hero: #f8fafc;
+  --title-hero-shadow: 0 2px 4px rgba(1, 1, 26, 0.8),
+    0 4px 8px rgba(3, 3, 46, 0.6), 0 1px 0px rgba(17, 36, 83, 0.9);
 }

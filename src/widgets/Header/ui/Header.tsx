@@ -12,6 +12,8 @@ import { Button } from "@/shared/ui/Button";
 import { useTranslation } from "react-i18next";
 import { Modal } from "@/shared/ui/Modal";
 import { LeaveForm } from "@/features/LeaveForm";
+import { MdLocalPhone } from "react-icons/md";
+import { SiTelegram } from "react-icons/si";
 
 function Header() {
   const [modal, setModal] = useState(false);
@@ -25,7 +27,7 @@ function Header() {
     <>
       <header className={styles.header}>
         <div className={clsx(["container", styles.containerBlock])}>
-          <Flex align="center" justify="space-between">
+          <Flex align="center" justify="space-between" gap={10}>
             <Link to={routePaths.HOME} className={styles.logoLink}>
               <img src="/logo.png" alt="logo Data business control" />
             </Link>
@@ -36,7 +38,17 @@ function Header() {
               ))}
             </Flex>
 
-            <Flex gap={10} align="center">
+            <Flex gap={15} align="center">
+              <a href="tel:+998999560427" className={styles.link}>
+                <MdLocalPhone className={styles.link} /> +998 99 956 04 27
+              </a>
+              <a
+                href="https://web.telegram.org/a/#688517356"
+                target="_blank"
+                className={styles.link}
+              >
+                <SiTelegram className={styles.link} />
+              </a>
               <SwitchLang />
               <Button
                 type_btn="default"
