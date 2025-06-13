@@ -6,24 +6,28 @@ import { Card } from "@/shared/ui/Card";
 import { Flex } from "@/shared/ui/Flex";
 import { Desc } from "@/shared/ui/Desc";
 import styles from "./Advantages.module.scss";
+import { useTranslation } from "react-i18next";
 
 function Advantages() {
+  const { t } = useTranslation();
+
   return (
     <Section>
       <div className="container">
         <div>
-          <Title addClass={styles.title} level={3}>
-            Наши преимущества
+          <Title addClass={styles.title} level={2}>
+            {t("Наши преимущества")}
           </Title>
 
           <div className={styles.gridBlock}>
             {advantageItems.map(({ id, Icon, title, description }) => (
-              <Card key={id}>
+              <Card key={id} addClass={styles.card}>
                 <Flex flexDirection="column" gap={15}>
                   <Flex align="center" gap={10}>
-                    <Icon /> <Title level={5}>{title}</Title>
+                    <Icon className={styles.icon} />
+                    <Title level={4}>{t(title)}</Title>
                   </Flex>
-                  <Desc>{description}</Desc>
+                  <Desc>{t(description)}</Desc>
                 </Flex>
               </Card>
             ))}

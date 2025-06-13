@@ -27,7 +27,7 @@ function HerroBlock() {
               расходы, Автоматизируем и систематизируем ваш бизнес.
             </p>
 
-            <Button type_btn="primary" onClick={openModal}>
+            <Button type_btn="primary" onClick={openModal} addClass={styles.btn}>
               Свяжитесь с нами сейчас
             </Button>
           </div>

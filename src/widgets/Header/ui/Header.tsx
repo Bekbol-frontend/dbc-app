@@ -43,7 +43,7 @@ function Header() {
                 <MdLocalPhone className={styles.link} /> +998 99 956 04 27
               </a>
               <a
-                href="https://web.telegram.org/a/#688517356"
+                href="https://t.me/@shariyardev"
                 target="_blank"
                 className={styles.link}
               >
