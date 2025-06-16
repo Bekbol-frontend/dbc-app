@@ -1,26 +1,29 @@
 import { memo } from "react";
 import { Section } from "@/shared/ui/Section";
 import { Title } from "@/shared/ui/Title";
-import { advantageItems } from "../model/types";
-import { Card } from "@/shared/ui/Card";
-import { Flex } from "@/shared/ui/Flex";
 import { Desc } from "@/shared/ui/Desc";
-import styles from "./Advantages.module.scss";
-import { useTranslation } from "react-i18next";
+import { Flex } from "@/shared/ui/Flex";
+import { ourServicesItems } from "../model/items";
+import { Card } from "@/shared/ui/Card";
+import styles from "./OurServices.module.scss";
 
-function Advantages() {
-  const { t } = useTranslation();
-
+function OurServices() {
   return (
     <Section>
       <div className="container">
         <div>
-          <Title addClass={styles.title} level={2}>
-            {t("Наши преимущества")}
-          </Title>
+          <Flex
+            flexDirection="column"
+            gap={10}
+            align="center"
+            addClass={styles.textBlock}
+          >
+            <Title>Наши услуги</Title>
+            <Desc>Комплексные решения для автоматизации вашего бизнеса</Desc>
+          </Flex>
 
-          <div className={styles.gridBlock}>
-            {advantageItems.map(({ id, Icon, title, description }) => (
+          <div className={styles.cards}>
+            {ourServicesItems.map(({ Icon, description, title, id }) => (
               <Card key={id} addClass={styles.card}>
                 <Flex
                   flexDirection="column"
@@ -47,4 +50,4 @@ function Advantages() {
   );
 }
 
-export default memo(Advantages);
+export default memo(OurServices);
