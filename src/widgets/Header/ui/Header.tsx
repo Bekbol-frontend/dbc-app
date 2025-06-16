@@ -14,12 +14,18 @@ import { Modal } from "@/shared/ui/Modal";
 import { LeaveForm } from "@/features/LeaveForm";
 import { MdLocalPhone } from "react-icons/md";
 import { SiTelegram } from "react-icons/si";
+import { IoMenuOutline } from "react-icons/io5";
+import MenuModal from "./MenuModal/MenuModal";
 
 function Header() {
   const [modal, setModal] = useState(false);
+  const [modalMenu, setModalMenu] = useState(false);
 
   const openModal = useCallback(() => setModal(true), []);
   const closeModal = useCallback(() => setModal(false), []);
+
+  const openModalMenu = useCallback(() => setModalMenu(true), []);
+  const closeModalMenu = useCallback(() => setModalMenu(false), []);
 
   const { t } = useTranslation();
 
@@ -32,7 +38,7 @@ function Header() {
               <img src="/logo.png" alt="logo Data business control" />
             </Link>
 
-            <Flex gap={40}>
+            <Flex gap={40} className={styles.menuLinks}>
               {menuItems.map((item) => (
                 <MenuItem item={item} key={item.name} />
               ))}
@@ -40,7 +46,7 @@ function Header() {
 
             <Flex gap={15} align="center">
               <a href="tel:+998999560427" className={styles.link}>
-                <MdLocalPhone className={styles.link} /> +998 99 956 04 27
+                <MdLocalPhone className={styles.iconTel} /> +998 99 956 04 27
               </a>
               <a
                 href="https://t.me/@shariyardev"
@@ -57,6 +63,13 @@ function Header() {
               >
                 {t("Оставить заявку")}
               </Button>
+              <Button
+                type_btn="default"
+                addClass={styles.menuBtn}
+                onClick={openModalMenu}
+              >
+                <IoMenuOutline className={styles.menuIcon} />
+              </Button>
               <SwitchTheme />
             </Flex>
           </Flex>
@@ -70,6 +83,15 @@ function Header() {
         title={t("Оставить заявку")}
       >
         <LeaveForm />
+      </Modal>
+
+      <Modal
+        open={modalMenu}
+        onClose={closeModalMenu}
+        lazy
+        title={t("Меню")}
+      >
+        <MenuModal />
       </Modal>
     </>
   );

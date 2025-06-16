@@ -24,7 +24,7 @@
     background-image: var(--card-gradient);
     max-width: 600px;
     width: 100%;
-    padding: var(--padding);
+    padding: clamp(20px, 2vw, 30px);
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
 
@@ -34,11 +34,15 @@
     }
 
     .modalBody {
-      padding-block: var(--padding);
+      padding-block: clamp(20px, 2vw, 30px);
     }
 
     .closeBtn {
       padding: var(--btn-padding-theme);
+
+      .closeBtnIcon {
+        font-size: clamp(--font-size-icon);
+      }
     }
   }
 }

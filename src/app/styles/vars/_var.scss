@@ -33,4 +33,7 @@
 
   // transition
   --transition: 200ms ease;
+
+  // icon
+  --font-size-icon: clamp(16px, 3vw, 18px);
 }

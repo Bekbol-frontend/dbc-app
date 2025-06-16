@@ -1,5 +1,5 @@
-import { useMemo, type ButtonHTMLAttributes, type ReactNode } from "react";
-import { clsx, type MODS_CLSX } from "@/shared/lib/clsx";
+import { type ButtonHTMLAttributes, type ReactNode } from "react";
+import { clsx } from "@/shared/lib/clsx";
 import styles from "./Button.module.scss";
 
 type TYPE_BTN = "primary" | "default" | "text";
@@ -18,13 +18,11 @@ function Button(props: IProps) {
     ...otherProps
   } = props;
 
-  const mods: MODS_CLSX = useMemo(
-    () => ({ [styles[type_btn]]: true }),
-    [type_btn]
-  );
-
   return (
-    <button {...otherProps} className={clsx([styles.btn, addClass], mods)}>
+    <button
+      {...otherProps}
+      className={clsx([styles.btn, addClass], { [styles[type_btn]]: true })}
+    >
       {children}
     </button>
   );

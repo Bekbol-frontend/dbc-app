@@ -1,0 +1,20 @@
+.menuLinks {
+  display: flex;
+
+  .menuLink {
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: var(--card-bg);
+      color: var(--primary);
+      opacity: 1;
+    }
+
+    @media (max-width: 650px) {
+      padding-left: 5px;
+    }
+  }
+}

@@ -48,6 +48,11 @@ h6 {
 a {
   display: inline-flex;
   text-decoration: none;
+  transition: opacity var(--transition), color var(--transition);
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 button {

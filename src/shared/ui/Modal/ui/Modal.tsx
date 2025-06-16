@@ -14,7 +14,7 @@ interface IProps {
   open: boolean;
   onClose: () => void;
   lazy?: boolean;
-  title: string;
+  title?: string;
 }
 
 function Modal(props: IProps) {
@@ -70,7 +70,7 @@ function Modal(props: IProps) {
                 addClass={styles.closeBtn}
                 onClick={closeModal}
               >
-                <MdClose />
+                <MdClose className={styles.closeBtnIcon} />
               </Button>
             </Flex>
           </div>
