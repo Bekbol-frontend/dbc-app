@@ -56,7 +56,7 @@ function Modal(props: IProps) {
   if (props.lazy && !open) return null;
 
   return (
-    <Portal>
+    <Portal content={document.getElementById("modal-wrapper")!}>
       <div
         className={clsx([styles.modal, addClass], mods)}
         onClick={closeModal}

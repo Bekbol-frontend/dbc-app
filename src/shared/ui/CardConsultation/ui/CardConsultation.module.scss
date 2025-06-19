@@ -1,0 +1,7 @@
+.bottomCard {
+  padding: clamp(25px, 2vw, 40px) !important;
+
+  & > div {
+    text-align: center;
+  }
+}

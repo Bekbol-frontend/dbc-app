@@ -3,6 +3,7 @@ import { Advantages } from "@/entities/Advantages";
 import { HerroBlock } from "@/entities/HerroBlock";
 import { OurServices } from "@/entities/OurServices";
 import { SuccessfulCases } from "@/entities/SuccessfulCases";
+import { CustomerReviews } from "@/entities/CustomerReviews";
 
 function HomePage() {
   return (
@@ -11,6 +12,7 @@ function HomePage() {
       <Advantages />
       <OurServices />
       <SuccessfulCases />
+      <CustomerReviews />
     </>
   );
 }

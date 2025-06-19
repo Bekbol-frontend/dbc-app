@@ -10,7 +10,7 @@ import { THEME_KEY, type THEME_TYPE } from "@/shared/constants/localStorage";
 
 function getLocalStorageTheme(): THEME_TYPE {
   const theme = localStorage.getItem(THEME_KEY);
-  return theme ? (theme as THEME_TYPE) : "light";
+  return theme ? (theme as THEME_TYPE) : "dark";
 }
 
 interface IProps {
