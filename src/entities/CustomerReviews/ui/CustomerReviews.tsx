@@ -5,6 +5,8 @@ import { Flex } from "@/shared/ui/Flex";
 import { Title } from "@/shared/ui/Title";
 import { Desc } from "@/shared/ui/Desc";
 import styles from "./CustomerReviews.module.scss";
+import { customerItems } from "../model/items";
+import { Card } from "@/shared/ui/Card";
 
 function CustomerReviews() {
   return (
@@ -48,6 +50,48 @@ function CustomerReviews() {
               <Desc>Поддержка клиентов</Desc>
             </Flex>
           </Flex>
+        </div>
+
+        <div className={styles.customers}>
+          {customerItems.map(
+            ({ id, firstName, lastName, companyName, desc, Icon, imgUrl }) => (
+              <Card key={id} addClass={styles.customerCard}>
+                <Flex gap={20} flexDirection="column">
+                  <Flex gap={10} flexDirection="column">
+                    <Flex gap={4}>
+                      {Array(5)
+                        .fill("")
+                        .map((_, index) => (
+                          <Icon className={styles.icon} key={index} />
+                        ))}
+                    </Flex>
+                    <Desc addClass={styles.descCompany}>{desc}</Desc>
+                  </Flex>
+                  <Flex align="center" gap={20}>
+                    <Flex
+                      align="center"
+                      justify="center"
+                      addClass={styles.imgWrapper}
+                    >
+                      {imgUrl ? (
+                        <img src={imgUrl} alt={firstName} />
+                      ) : (
+                        <Desc>{`${firstName[0]}${lastName[0]}`}</Desc>
+                      )}
+                    </Flex>
+                    <Flex flexDirection="column" gap={5}>
+                      <Title level={5}>
+                        {firstName} {lastName}
+                      </Title>
+                      <Desc addClass={styles.descCompanyName}>
+                        {companyName}
+                      </Desc>
+                    </Flex>
+                  </Flex>
+                </Flex>
+              </Card>
+            )
+          )}
         </div>
       </div>
     </Section>

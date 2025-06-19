@@ -4,6 +4,7 @@
   border: 1px solid var(--border-color);
   padding: var(--padding);
   border-radius: var(--border-radius);
+  margin-bottom: var(--margin-bottom-title);
 
   .flex {
     @media (max-width: 500px) {
@@ -15,9 +16,61 @@
       text-align: center;
       width: 100%;
 
+      &:last-child {
+        border: none;
+      }
+
       & > h2 {
         font-weight: 700;
       }
+
+      @media (max-width: 500px) {
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 15px;
+
+        &:last-child {
+          border: none;
+        }
+      }
     }
+  }
+}
+
+.customers {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+
+  .customerCard {
+    .icon {
+      font-size: clamp(20px, 2vw, 25px);
+      color: gold;
+    }
+  }
+}
+
+.descCompany {
+  font-style: italic !important;
+}
+
+.descCompanyName {
+  font-size: 14px;
+}
+
+.imgWrapper {
+  width: clamp(50px, 6vw, 80px);
+  height: clamp(50px, 6vw, 80px);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+
+  img {
+    width: clamp(50px, 6vw, 80px);
+    height: clamp(50px, 6vw, 80px);
+    object-fit: cover;
   }
 }
