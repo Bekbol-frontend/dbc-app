@@ -1,0 +1,15 @@
+.card {
+  text-align: center;
+  padding: clamp(25px, 2vw, 40px) !important;
+
+  .iconWrapper {
+    .icon {
+      font-size: clamp(30px, 3vw, 50px);
+    }
+  }
+
+  .cardInnerBottom {
+    width: 100%;
+    background-color: var(--body-bg);
+  }
+}

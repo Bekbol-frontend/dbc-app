@@ -1,14 +1,8 @@
-import type { IconType } from "react-icons";
+import type { ICardInfoItem } from "@/shared/ui/CardInfoItem";
 import { FaCogs, FaDollarSign, FaHeadset, FaUserTie } from "react-icons/fa";
 
-interface IAdvantagesCard {
-  id: number;
-  Icon: IconType;
-  title: string;
-  description: string;
-}
 
-export const advantageItems: IAdvantagesCard[] = [
+export const advantageItems: ICardInfoItem[] = [
   {
     id: 1,
     Icon: FaUserTie,

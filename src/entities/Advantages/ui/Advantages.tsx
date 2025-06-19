@@ -2,11 +2,9 @@ import { memo } from "react";
 import { Section } from "@/shared/ui/Section";
 import { Title } from "@/shared/ui/Title";
 import { advantageItems } from "../model/types";
-import { Card } from "@/shared/ui/Card";
-import { Flex } from "@/shared/ui/Flex";
-import { Desc } from "@/shared/ui/Desc";
 import styles from "./Advantages.module.scss";
 import { useTranslation } from "react-i18next";
+import { CardInfoItem } from "@/shared/ui/CardInfoItem";
 
 function Advantages() {
   const { t } = useTranslation();
@@ -20,25 +18,8 @@ function Advantages() {
           </Title>
 
           <div className={styles.gridBlock}>
-            {advantageItems.map(({ id, Icon, title, description }) => (
-              <Card key={id} addClass={styles.card}>
-                <Flex
-                  flexDirection="column"
-                  gap={15}
-                  align="center"
-                  justify="center"
-                >
-                  <Flex
-                    align="center"
-                    justify="center"
-                    addClass={styles.iconWrapper}
-                  >
-                    <Icon className={styles.icon} />
-                  </Flex>
-                  <Title level={4}>{title}</Title>
-                  <Desc>{description}</Desc>
-                </Flex>
-              </Card>
+            {advantageItems.map((card) => (
+              <CardInfoItem card={card} key={card.id} />
             ))}
           </div>
         </div>

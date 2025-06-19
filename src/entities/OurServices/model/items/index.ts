@@ -1,4 +1,4 @@
-import type { IOurServicesCard } from "../types";
+import type { ICardInfoItem } from "@/shared/ui/CardInfoItem";
 import {
   FaUsers,
   FaCogs,
@@ -8,7 +8,7 @@ import {
   FaVideo,
 } from "react-icons/fa";
 
-export const ourServicesItems: IOurServicesCard[] = [
+export const ourServicesItems: ICardInfoItem[] = [
   {
     id: 1,
     Icon: FaUsers,
