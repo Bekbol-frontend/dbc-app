@@ -7,6 +7,7 @@ import { Desc } from "@/shared/ui/Desc";
 import styles from "./CustomerReviews.module.scss";
 import { customerItems } from "../model/items";
 import { Card } from "@/shared/ui/Card";
+import { CardConsultation } from "@/shared/ui/CardConsultation";
 
 function CustomerReviews() {
   return (
@@ -93,6 +94,12 @@ function CustomerReviews() {
             )
           )}
         </div>
+
+        <CardConsultation
+          title="Готовы автоматизировать свой бизнес?"
+          desc="Получите бесплатную консультацию и узнайте, как мы можем помочь вашей компании"
+          btnText="Оставить заявку"
+        />
       </div>
     </Section>
   );

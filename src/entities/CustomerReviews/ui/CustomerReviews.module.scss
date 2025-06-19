@@ -30,6 +30,7 @@
 
         &:last-child {
           border: none;
+          padding-bottom: 0;
         }
       }
     }
@@ -40,6 +41,7 @@
   display: grid;
   gap: 15px;
   grid-template-columns: repeat(2, 1fr);
+  margin-bottom: var(--margin-bottom-title);
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
