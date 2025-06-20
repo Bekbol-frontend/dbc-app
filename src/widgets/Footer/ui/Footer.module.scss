@@ -1,0 +1,32 @@
+.footer {
+  background: var(--footer-bg);
+  padding: var(--padding-footer);
+  border-top: 1px solid var(--border-color);
+}
+
+.main-flex {
+  flex: 1;
+  width: 100%;
+}
+
+.flex-1 {
+  flex: 1;
+  .link {
+    font-size: var(--font-size-icon);
+  }
+}
+
+.flex-2 {
+  flex: 1;
+}
+
+.flex-3 {
+  flex: 1;
+}
+
+.footerBottom {
+  border-top: 1px solid var(--border-color);
+  margin-top: 25px;
+  padding-top: 25px;
+  text-align: center;
+}

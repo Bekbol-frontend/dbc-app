@@ -1,7 +1,5 @@
 import { memo, useCallback, useState } from "react";
-import { Link } from "react-router-dom";
 import { clsx } from "@/shared/lib/clsx";
-import { routePaths } from "@/shared/config/routeConfig";
 import styles from "./Header.module.scss";
 import { Flex } from "@/shared/ui/Flex";
 import { menuItems } from "../model/menu";
@@ -16,6 +14,7 @@ import { MdLocalPhone } from "react-icons/md";
 import { SiTelegram } from "react-icons/si";
 import { IoMenuOutline } from "react-icons/io5";
 import MenuModal from "./MenuModal/MenuModal";
+import { Logo } from "@/shared/ui/Logo";
 
 function Header() {
   const [modal, setModal] = useState(false);
@@ -34,10 +33,7 @@ function Header() {
       <header className={styles.header}>
         <div className={clsx(["container", styles.containerBlock])}>
           <Flex align="center" justify="space-between" gap={10}>
-            <Link to={routePaths.HOME} className={styles.logoLink}>
-              <img src="/logo.png" alt="logo Data business control" />
-            </Link>
-
+            <Logo />
             <Flex gap={40} className={styles.menuLinks}>
               {menuItems.map((item) => (
                 <MenuItem item={item} key={item.name} />
@@ -85,12 +81,7 @@ function Header() {
         <LeaveForm />
       </Modal>
 
-      <Modal
-        open={modalMenu}
-        onClose={closeModalMenu}
-        lazy
-        title={t("Меню")}
-      >
+      <Modal open={modalMenu} onClose={closeModalMenu} lazy title={t("Меню")}>
         <MenuModal />
       </Modal>
     </>

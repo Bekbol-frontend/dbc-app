@@ -25,6 +25,15 @@ body.light {
   );
   --header-border-color: rgba(0, 0, 0, 0.09);
 
+  // footer
+  --footer-bg: radial-gradient(
+    ellipse at center top,
+    rgb(255, 255, 255) 0%,
+    rgb(248, 250, 252) 40%,
+    rgb(241, 245, 249) 70%,
+    rgb(226, 232, 240) 100%
+  );
+
   // border
   --border-color: rgba(0, 0, 0, 0.2);
 

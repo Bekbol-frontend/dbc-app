@@ -7,6 +7,9 @@
   --header-height: 90px;
   --header-z-index: 2;
 
+  // footer
+  --padding-footer: clamp(30px, 3vw, 50px) 0px;
+
   // btn
   --btn-padding: 10px 20px;
   --btn-padding-theme: 10px;

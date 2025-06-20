@@ -17,21 +17,6 @@
   .containerBlock {
     flex: 1;
 
-    .logoLink {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--color-white);
-      padding: 10px;
-      border-radius: 10px;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--logo-shodow);
-
-      img {
-        width: clamp(70px, 7vw, 115px);
-      }
-    }
-
     .menuLinks {
       display: flex;
 

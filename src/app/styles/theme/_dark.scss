@@ -26,6 +26,14 @@ body.dark {
   );
   --header-border-color: rgba(255, 255, 255, 0.09);
 
+  // footer
+  --footer-bg: radial-gradient(
+    ellipse at center top,
+    rgb(17, 36, 83) 0%,
+    rgb(15, 23, 42) 40%,
+    rgb(10, 24, 56) 70%,
+    rgb(13, 13, 85) 100%
+  );
   // border
   --border-color: rgba(255, 255, 255, 0.2);
 
