@@ -4,6 +4,7 @@ import { HerroBlock } from "@/entities/HerroBlock";
 import { OurServices } from "@/entities/OurServices";
 import { SuccessfulCases } from "@/entities/SuccessfulCases";
 import { CustomerReviews } from "@/entities/CustomerReviews";
+import { OurPartners } from "@/entities/OurPartners";
 
 function HomePage() {
   return (
@@ -13,6 +14,7 @@ function HomePage() {
       <OurServices />
       <SuccessfulCases />
       <CustomerReviews />
+      <OurPartners />
     </>
   );
 }

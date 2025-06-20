@@ -6,7 +6,6 @@ import { BrowserRouter } from "react-router-dom";
 
 // css
 import "./app/styles/main.scss";
-
 // i18n
 import "./shared/config/i18n";
 
