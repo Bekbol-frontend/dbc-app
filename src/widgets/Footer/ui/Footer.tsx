@@ -69,15 +69,15 @@ function Footer() {
             <Title level={5}>Контакты</Title>
             <Flex flexDirection="column" gap={13}>
               <Flex align="center" gap={5}>
-                <IoLocationOutline />
+                <IoLocationOutline className={styles.link} />
                 <Desc>г. Алматы, ул. Абая 150/230, БЦ "Esentai Tower"</Desc>
               </Flex>
               <Flex align="center" gap={5}>
-                <MdLocalPhone />
+                <MdLocalPhone className={styles.link} />
                 <Desc>+998 99 956 04 27</Desc>
               </Flex>
               <Flex align="center" gap={5}>
-                <MdOutlineMailOutline />
+                <MdOutlineMailOutline className={styles.link} />
                 <Desc>info@dbc.kz</Desc>
               </Flex>
             </Flex>
@@ -96,7 +96,7 @@ function Footer() {
         </Flex>
 
         <div className={styles.footerBottom}>
-          <Desc>© {year} DBC. All rights reserved.</Desc>
+          <Desc>© {year} DBC. Все права защищены.</Desc>
         </div>
       </div>
     </footer>

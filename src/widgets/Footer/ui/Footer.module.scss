@@ -7,13 +7,26 @@
 .main-flex {
   flex: 1;
   width: 100%;
+
+  @media (max-width: 900px) {
+    flex-direction: column !important;
+    gap: 20px !important;
+
+    & > div {
+      border-bottom: 1px solid var(--border-color);
+      width: 100%;
+      padding-bottom: 20px;
+    }
+
+    & > div:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+  }
 }
 
 .flex-1 {
   flex: 1;
-  .link {
-    font-size: var(--font-size-icon);
-  }
 }
 
 .flex-2 {
@@ -22,6 +35,10 @@
 
 .flex-3 {
   flex: 1;
+}
+
+.link {
+  font-size: var(--font-size-icon);
 }
 
 .footerBottom {
