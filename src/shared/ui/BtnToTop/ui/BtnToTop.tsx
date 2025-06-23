@@ -10,19 +10,22 @@ function BtnToTop() {
   const [show, setShow] = useState(false);
 
   const onScroll = useCallback(() => {
+    console.log("scroll");
+
     const result = window.scrollY >= 700;
-    setShow(result);
+    setShow((prev) => (prev !== result ? result : prev));
   }, []);
 
-  const throttleCallback = useThrottle(onScroll, 500);
+  const throttleCallback = useThrottle(onScroll, 150);
 
   useEffect(() => {
+    onScroll();
     window.addEventListener("scroll", throttleCallback);
 
     return () => {
       window.removeEventListener("scroll", throttleCallback);
     };
-  }, [throttleCallback]);
+  }, [throttleCallback, onScroll]);
 
   const onClickBtnToTop = useCallback(() => {
     window.scrollTo({
