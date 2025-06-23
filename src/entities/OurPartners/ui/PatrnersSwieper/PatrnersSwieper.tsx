@@ -1,63 +1,62 @@
 import { memo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import styles from "./PatrnersSwieper.module.scss";
-import Adidas from "@/shared/assets/Adidas-logo.png";
-import Nike from "@/shared/assets/nike logo.png";
-import Reebok from "@/shared/assets/reebok logo.png";
-import Cadilac from "@/shared/assets/cadilac logo.jpg";
-
 import { Flex } from "@/shared/ui/Flex";
 import { Card } from "@/shared/ui/Card";
+import styles from "./PatrnersSwieper.module.scss";
+
+// Images
+import BabyMarket from "@/shared/assets/partners-logo/Baby Market, посты.png";
+import DBC from "@/shared/assets/partners-logo/DBC1.png";
+import LOGO_APP_XALIQ from "@/shared/assets/partners-logo/LOGO APP XALIQ-02.png";
+import LOGO from "@/shared/assets/partners-logo/LOGO.png";
+import MTM from "@/shared/assets/partners-logo/MTM logo.png";
+import TMG from "@/shared/assets/partners-logo/TMG.png";
+import ALPAMIS_STOMA from "@/shared/assets/partners-logo/alpamis stoma.png";
+import PHOTO1 from "@/shared/assets/partners-logo/photo_2024-04-23_12-08-52.jpg";
+import PHOTO2 from "@/shared/assets/partners-logo/photo_2024-04-23_12-13-12.jpg";
+import LOGO_RIVOZH from "@/shared/assets/partners-logo/ЛОГО РИВОЖ.png";
 
 const items = [
   {
     id: 1,
-    img: Adidas,
+    img: BabyMarket,
   },
   {
     id: 2,
-    img: Nike,
+    img: DBC,
   },
   {
     id: 3,
-    img: Reebok,
+    img: LOGO_APP_XALIQ,
   },
   {
     id: 4,
-    img: Cadilac,
+    img: LOGO,
   },
   {
     id: 5,
-    img: Adidas,
-  },
-  {
-    id: 6,
-    img: Nike,
+    img: MTM,
   },
   {
     id: 7,
-    img: Reebok,
+    img: TMG,
   },
   {
     id: 8,
-    img: Cadilac,
+    img: ALPAMIS_STOMA,
   },
   {
     id: 9,
-    img: Adidas,
+    img: PHOTO1,
   },
   {
     id: 10,
-    img: Nike,
+    img: PHOTO2,
   },
   {
     id: 11,
-    img: Reebok,
-  },
-  {
-    id: 12,
-    img: Cadilac,
+    img: LOGO_RIVOZH,
   },
 ];
 
@@ -79,14 +78,13 @@ function PatrnersSwieper() {
       speed={3000}
       breakpoints={{
         768: {
-          
           slidesPerView: 4,
         },
       }}
     >
       {items.map(({ id, img }) => (
         <SwiperSlide key={id}>
-          <Card>
+          <Card addClass={styles.swiperCard}>
             <Flex align="center" justify="center" addClass={styles.imgWrapper}>
               <img src={img} alt="image logo" />
             </Flex>

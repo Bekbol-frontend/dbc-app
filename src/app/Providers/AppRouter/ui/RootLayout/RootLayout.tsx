@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { Header } from "@/widgets/Header";
 import styles from "./RootLayout.module.scss";
 import { Footer } from "@/widgets/Footer";
+import { BtnToTop } from "@/shared/ui/BtnToTop";
 
 function RootLayout() {
   return (
@@ -12,6 +13,8 @@ function RootLayout() {
         <Outlet />
       </main>
       <Footer />
+
+      <BtnToTop />
     </>
   );
 }

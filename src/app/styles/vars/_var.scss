@@ -5,7 +5,12 @@
 
   // header
   --header-height: 90px;
-  --header-z-index: 2;
+  --header-z-index: 1000;
+
+  // btn-to-top
+  --btn-to-top-z-index: 100;
+  --btn-to-top-position-bottom: 20px;
+  --btn-to-top-position-right: 10px;
 
   // footer
   --padding-footer: clamp(30px, 3vw, 50px) 0px;

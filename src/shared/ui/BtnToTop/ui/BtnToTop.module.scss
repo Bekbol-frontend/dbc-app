@@ -1,0 +1,13 @@
+.btnToTop {
+  position: fixed;
+  bottom: var(--btn-to-top-position-bottom);
+  right: var(--btn-to-top-position-right);
+  z-index: var(--btn-to-top-z-index);
+  padding: var(--btn-padding-theme);
+  border: 1px solid var(--border-color);
+  display: none;
+
+  &.show {
+    display: inline-flex;
+  }
+}
