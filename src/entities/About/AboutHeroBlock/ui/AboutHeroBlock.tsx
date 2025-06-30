@@ -1,5 +1,6 @@
 import { Hero } from "@/shared/ui/Hero";
 import { Section } from "@/shared/ui/Section";
+import { memo } from "react";
 
 function AboutHeroBlock() {
   return (
@@ -14,4 +15,4 @@ function AboutHeroBlock() {
   );
 }
 
-export default AboutHeroBlock;
+export default memo(AboutHeroBlock);

@@ -86,7 +86,7 @@ function PatrnersSwieper() {
         <SwiperSlide key={id}>
           <Card addClass={styles.swiperCard}>
             <Flex align="center" justify="center" addClass={styles.imgWrapper}>
-              <img src={img} alt="image logo" />
+              <img src={img} alt="image logo" loading="lazy" />
             </Flex>
           </Card>
         </SwiperSlide>
