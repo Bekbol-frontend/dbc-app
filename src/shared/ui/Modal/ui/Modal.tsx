@@ -49,6 +49,14 @@ function Modal(props: IProps) {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [open]);
+
   const mods: MODS_CLSX = {
     [styles.show]: delay,
   };

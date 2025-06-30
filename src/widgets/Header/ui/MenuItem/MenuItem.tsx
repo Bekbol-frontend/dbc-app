@@ -16,7 +16,14 @@ function MenuItem({ item, addClass = "" }: IProps) {
   const { t } = useTranslation();
 
   return (
-    <NavLink to={path} className={clsx([styles.item, addClass])}>
+    <NavLink
+      to={path}
+      className={({ isActive }) =>
+        clsx([styles.item, addClass], {
+          [styles.active]: isActive,
+        })
+      }
+    >
       {t(name)}
     </NavLink>
   );

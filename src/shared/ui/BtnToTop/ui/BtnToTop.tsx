@@ -10,8 +10,6 @@ function BtnToTop() {
   const [show, setShow] = useState(false);
 
   const onScroll = useCallback(() => {
-    console.log("scroll");
-
     const result = window.scrollY >= 700;
     setShow((prev) => (prev !== result ? result : prev));
   }, []);

@@ -3,6 +3,10 @@ import type { IMenuItem } from "../types";
 
 export const menuItems: IMenuItem[] = [
   {
+    path: routePaths.HOME,
+    name: "Главная",
+  },
+  {
     path: routePaths.ABOUT,
     name: "О нас",
   },

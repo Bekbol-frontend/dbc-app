@@ -2,8 +2,13 @@
   font-size: 16px;
   text-transform: capitalize;
   color: var(--link-color);
+  padding: 10px 15px;
+  transition: background-color var(--transition), color var(--transition);
 
+  &.active,
   &:hover {
-    opacity: 0.7;
+    background-color: var(--primary);
+    border-radius: 4px;
+    color: var(--color-white);
   }
 }

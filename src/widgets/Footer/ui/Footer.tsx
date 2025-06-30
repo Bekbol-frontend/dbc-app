@@ -29,21 +29,21 @@ function Footer() {
             </Desc>
             <Flex gap={10}>
               <a
-                href="https://t.me/@shariyardev"
+                href="https://www.instagram.com/shariyar.dev/"
                 target="_blank"
                 className={styles.link}
               >
                 <SiInstagram />
               </a>
               <a
-                href="https://t.me/@shariyardev"
+                href="https://t.me/shariyardev"
                 target="_blank"
                 className={styles.link}
               >
                 <SiTelegram />
               </a>
               <a
-                href="https://t.me/@shariyardev"
+                href="https://web.whatsapp.com/shariyardev"
                 target="_blank"
                 className={styles.link}
               >

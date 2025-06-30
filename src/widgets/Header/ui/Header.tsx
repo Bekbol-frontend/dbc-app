@@ -34,7 +34,7 @@ function Header() {
         <div className={clsx(["container", styles.containerBlock])}>
           <Flex align="center" justify="space-between" gap={10}>
             <Logo />
-            <Flex gap={40} className={styles.menuLinks}>
+            <Flex gap={20} className={styles.menuLinks}>
               {menuItems.map((item) => (
                 <MenuItem item={item} key={item.name} />
               ))}
@@ -45,7 +45,7 @@ function Header() {
                 <MdLocalPhone className={styles.iconTel} /> +998 99 956 04 27
               </a>
               <a
-                href="https://t.me/@shariyardev"
+                href="https://t.me/shariyardev"
                 target="_blank"
                 className={styles.link}
               >

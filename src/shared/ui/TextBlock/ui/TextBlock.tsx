@@ -5,7 +5,7 @@ import styles from "./TextBlock.module.scss";
 
 interface IProps {
   title: string;
-  desc: string;
+  desc?: string;
 }
 
 function TextBlock({ title, desc }: IProps) {
@@ -17,7 +17,7 @@ function TextBlock({ title, desc }: IProps) {
       addClass={styles.textBlock}
     >
       <Title>{title}</Title>
-      <Desc>{desc}</Desc>
+      {desc && <Desc>{desc}</Desc>}
     </Flex>
   );
 }
