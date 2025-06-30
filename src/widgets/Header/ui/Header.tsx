@@ -82,7 +82,7 @@ function Header() {
       </Modal>
 
       <Modal open={modalMenu} onClose={closeModalMenu} lazy title={t("Меню")}>
-        <MenuModal />
+        <MenuModal onClose={closeModalMenu}/>
       </Modal>
     </>
   );

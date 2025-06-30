@@ -1,7 +1,7 @@
 .block {
   .titleBlock {
     .title {
-      font-size: clamp(50px, 5vw, 90px);
+      font-size: clamp(35px, 5vw, 90px);
       font-weight: 900;
       letter-spacing: 2px;
       color: var(--title-hero);
@@ -10,7 +10,7 @@
   }
 
   .desc {
-    font-size: clamp(17px, 4vw, 25px);
+    font-size: clamp(17px, 5vw, 22px);
     font-weight: 500;
     max-width: 800px;
     width: 100%;

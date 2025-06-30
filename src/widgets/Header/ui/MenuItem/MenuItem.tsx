@@ -8,9 +8,10 @@ import { useTranslation } from "react-i18next";
 interface IProps {
   item: IMenuItem;
   addClass?: string;
+  onClose?: () => void;
 }
 
-function MenuItem({ item, addClass = "" }: IProps) {
+function MenuItem({ item, addClass = "", onClose }: IProps) {
   const { name, path } = item;
 
   const { t } = useTranslation();
@@ -23,6 +24,11 @@ function MenuItem({ item, addClass = "" }: IProps) {
           [styles.active]: isActive,
         })
       }
+      onClick={() => {
+        if (onClose) {
+          onClose();
+        }
+      }}
     >
       {t(name)}
     </NavLink>
