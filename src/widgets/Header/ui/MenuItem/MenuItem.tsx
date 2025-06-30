@@ -1,6 +1,6 @@
-import { memo } from "react";
+import { memo, useCallback } from "react";
 import type { IMenuItem } from "../../model/types";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import styles from "./MenuItem.module.scss";
 import { clsx } from "@/shared/lib/clsx";
 import { useTranslation } from "react-i18next";
@@ -14,7 +14,18 @@ interface IProps {
 function MenuItem({ item, addClass = "", onClose }: IProps) {
   const { name, path } = item;
 
+  const { pathname } = useLocation();
+
   const { t } = useTranslation();
+
+  const onClickLink = useCallback(() => {
+    if (path === pathname) return;
+
+    if (onClose) {
+      onClose();
+      window.scrollTo(0, 0);
+    }
+  }, [onClose, pathname, path]);
 
   return (
     <NavLink
@@ -24,11 +35,7 @@ function MenuItem({ item, addClass = "", onClose }: IProps) {
           [styles.active]: isActive,
         })
       }
-      onClick={() => {
-        if (onClose) {
-          onClose();
-        }
-      }}
+      onClick={onClickLink}
     >
       {t(name)}
     </NavLink>
