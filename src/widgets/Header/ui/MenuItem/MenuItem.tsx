@@ -21,9 +21,10 @@ function MenuItem({ item, addClass = "", onClose }: IProps) {
   const onClickLink = useCallback(() => {
     if (path === pathname) return;
 
+    window.scrollTo(0, 0);
+
     if (onClose) {
       onClose();
-      window.scrollTo(0, 0);
     }
   }, [onClose, pathname, path]);
 

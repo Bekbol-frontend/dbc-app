@@ -1,0 +1,10 @@
+.pageLoading {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: var(--padding);
+
+  .block {
+    text-align: center;
+  }
+}
