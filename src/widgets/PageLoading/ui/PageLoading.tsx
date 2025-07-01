@@ -1,6 +1,6 @@
 import { Title } from "@/shared/ui/Title";
-import styles from "./PageLoading.module.scss";
 import { useTranslation } from "react-i18next";
+import styles from "./PageLoading.module.scss";
 
 function PageLoading() {
   const { t } = useTranslation();
